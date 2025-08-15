@@ -1,0 +1,1 @@
+#container,body{align-items:center;display:flex;height:100vh;justify-content:center}#container{flex-direction:column}.board{cursor:url(4d9bb435d82c2ce36b6b.png),pointer;display:grid;gap:10px}.cell{background-color:rgba(0,0,255,.315)}.movImg{display:block}
