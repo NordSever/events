@@ -1,0 +1,30 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    
+};
+
+#container {
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    
+}
+
+.board {
+    display: grid;
+    gap: 10px; 
+    cursor: url(../img/hammer.png), pointer;
+}
+
+.cell {
+    background-color:   rgba(0, 0, 255, 0.315);
+}
+
+.movImg {
+    display: block;
+}
