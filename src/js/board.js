@@ -8,9 +8,6 @@ export default class Board {
   }
 
   createBoard() {
-    // if(typeof numberSize !== 'number' || numberSize <= 1){
-    //   throw new Error ('Некорректные входные данные');
-    // }
     this.element.innerHTML = "";
 
     for (let i = 0; i < this.numberCells; i++) {
