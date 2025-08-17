@@ -20,21 +20,27 @@ export default class Game {
 
   init() {
     let container = document.getElementById("container");
-    container.appendChild(this.score.element);
-
     this.board.createBoard();
-    container.appendChild(this.board.element);
+
+    container.append(this.score.element, this.board.element);
 
     this.click();
     this.start();
   }
 
   click() {
-    this.goblinsImg.element.addEventListener("click", () => {
-      this.flagOfClick = true;
-      this.score.increment();
-      this.goblinsImg.nextSeriesImg(this.score.numberSeries);
-      this.goblinsImg.hide();
+    this.board.element.addEventListener("click", (eve) => {
+      if (eve.target === this.goblinsImg.element) {
+        this.flagOfClick = true;
+        this.score.increment();
+        this.goblinsImg.nextSeriesImg(this.score.numberSeries);
+        this.goblinsImg.hide();
+      } else if (this.goblinsImg.isVisible) {
+        this.flagOfClick = true;
+        this.score.miss();
+        this.goblinsImg.nextSeriesImg(this.score.numberSeries);
+        this.goblinsImg.hide();
+      }
     });
   }
 

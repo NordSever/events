@@ -7,14 +7,17 @@ export default class MovingImg {
     this.element = document.createElement("img");
     this.element.classList.add("movImg");
     this.element.src = firstGoblin;
+    this.isVisible = false;
   }
 
   showImg(cell) {
-    cell.appendChild(this.element);
+    cell.append(this.element);
+    this.isVisible = true;
   }
 
   hide() {
     this.element.closest(".cell").innerHTML = "";
+    this.isVisible = false;
   }
 
   nextSeriesImg(numberSeries = 0) {

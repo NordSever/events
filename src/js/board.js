@@ -19,7 +19,7 @@ export default class Board {
       cell.style["aspect-ratio"] = "1/1";
       cell.dataset["id"] = i;
       this.ArrayCells.push(cell);
-      this.element.appendChild(cell);
+      this.element.append(cell);
     }
 
     this.element.style["grid-template-columns"] =
